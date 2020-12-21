@@ -255,13 +255,13 @@ https://templatemo.com/tm-530-mini-profile
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="capture.png" alt="Los Angeles" width="1100" height="500">
+      <img src="https://source.unsplash.com/TfuheOPlLB4" alt="Los Angeles" width="1100" height="700">
     </div>
     <div class="carousel-item">
-      <img src="capture1.png" alt="Chicago" width="1100" height="500">
+      <img src="https://source.unsplash.com/sv0l9N0i7L8" alt="Chicago" width="1100" height="700">
     </div>
     <div class="carousel-item">
-      <img src="ny.jpg" alt="New York" width="1100" height="500">
+      <img src="https://source.unsplash.com/yZIREdPCj3o" alt="New York" width="1100" height="700">
     </div>
   </div>
   
