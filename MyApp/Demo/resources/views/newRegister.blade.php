@@ -48,7 +48,24 @@
                                     </span>
                                 @enderror
                                     </div>
-                                    
+                                <div class="form-group">
+                                    <input id="phone" type="text" class="form-control form-control-user @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone"
+                                        placeholder="Phone Number">
+                                        @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                </div>    
+                                </div>
+                                <div class="form-group">
+                                    <input id="Address" type="text" class="form-control form-control-user @error('Address') is-invalid @enderror" name="Address" value="{{ old('Address') }}" required autocomplete="Address"
+                                        placeholder="Address">
+                                        @error('Address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                                 <div class="form-group">
                                     <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"
