@@ -1,32 +1,53 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Register</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{{asset('/customAuth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{{asset('/customAuth/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
+</head>
+
 <body class="bg-gradient-primary">
 
-    <div class="container" style="background-color: white">
+    <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7" style="background-color: pink; border: 2px solid #e75480;">
+                    <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4" style="font-weight: 500">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
                             <form method="POST" action="{{ route('register') }}">
                         @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                       <input id= "role" type="text" style="border-radius: 10px;"  name="Role" onkeyup='GetSelectedText();' placeholder="Role (Customer or Beautician)" pattern="^(Customer|Beautician)$"
+                                       <input id= "role" type="text"  name="Role" onkeyup='GetSelectedText();' placeholder="Role (Customer or Beautician)" pattern="^(Customer|Beautician)$"
             title="Enter Customer or Beautician!" >
 
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" style="border-radius: 10px;" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
+                                        <input id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
                                             placeholder="First Name">
                                             @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -35,7 +56,7 @@
                                 @enderror
                                     </div>
                                 <div class="form-group">
-                                    <input id="phone" type="text" class="form-control form-control-user @error('phone') is-invalid @enderror" style="border-radius: 10px;" name="phone" value="{{ old('phone') }}" required autocomplete="phone"
+                                    <input id="phone" type="text" class="form-control form-control-user @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone"
                                         placeholder="Phone Number" style="visibility: hidden;">
                                         @error('phone')
                                     <span class="invalid-feedback" role="alert">
@@ -45,7 +66,7 @@
                                 </div>    
                                 </div>
                                 <div class="form-group">
-                                    <input id="Address" type="text" class="form-control form-control-user @error('Address') is-invalid @enderror" style="border-radius: 10px;" name="Address" value="{{ old('Address') }}" required autocomplete="Address"
+                                    <input id="Address" type="text" class="form-control form-control-user @error('Address') is-invalid @enderror" name="Address" value="{{ old('Address') }}" required autocomplete="Address"
                                         placeholder="Address" style="visibility: hidden;">
                                         @error('Address')
                                     <span class="invalid-feedback" role="alert">
@@ -54,7 +75,7 @@
                                 @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" style="border-radius: 10px;" name="email" value="{{ old('email') }}" required autocomplete="email"
+                                    <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"
                                         placeholder="Email Address">
                                         @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -65,7 +86,7 @@
                                 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" style="border-radius: 10px;" name="password" required autocomplete="new-password"
+                                        <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"
                                          placeholder="Password">
                                          @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -74,11 +95,11 @@
                                 @enderror
                                     </div>
                                     <div class="col-sm-6">
-                                        <input id="password-confirm" type="password" class="form-control" style="border-radius: 10px;" name="password_confirmation" required autocomplete="new-password"
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"
                                          placeholder="Repeat Password">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700">
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
                                     {{ __('Register') }}
                                 </button>
                                 <hr>
@@ -86,10 +107,10 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="new-forgot" style="color: #e75480; font-weight: 400">Forgot Password?</a>
+                                <a class="small" href="new-forgot">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="new-login" style="color: #e75480; font-weight: 400">Already have an account? Login!</a>
+                                <a class="small" href="new-login">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -110,10 +131,8 @@
     <script src="js/sb-admin-2.min.js"></script>
     <script>
     function GetSelectedText(){
-                var e = document.getElementById("role");
-                if(typeof(e)=='undefined'){
-                  var result='Beautician';   
-                }
+				var e = document.getElementById("role");
+				var result = e.options[e.selectedIndex].value;
 
 				if(document.getElementById('role').value =="Beautician"){
                     document.getElementById('phone').style.visibility='visible';
@@ -127,4 +146,5 @@
 			}</script>
 
 </body>
-@endsection
+
+</html>

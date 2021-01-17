@@ -1,30 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>SB Admin 2 - Login</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="{{asset('/customAuth/vendor/fontawesome-free/css/all.min.css')}}"  rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="{{asset('/customAuth/css/sb-admin-2.min.css')}}" rel="stylesheet">
-
-</head>
+@section('content')
 
 <body class="bg-gradient-primary">
 
-    <div class="container">
+    <div class="container" style="background-color: white">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -36,15 +16,15 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6" style="background-color: pink; border: 0px solid #e75480;">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4" style="font-weight: 500">Welcome Back!</h1>
                                     </div>
                                     <form method="POST" class="user" action="{{ route('login') }}">
                                         @csrf
                                         <div class="form-group">
-                                            <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+                                            <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror"  style="border-radius: 10px;" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
                                                 placeholder="Enter Email Address...">
                                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -53,7 +33,7 @@
                                 @enderror
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" class="form-control form-control-user" style="border-radius: 10px;"
                                                 id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"id="exampleInputPassword" 
                                                 placeholder="Password">
                                                 @error('password')
@@ -64,12 +44,12 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input class="form-check-input custom-control-user" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                                <input  type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                 <label class="custom-control-label" for="customCheck">Remember
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: #e75480; color: white; border: 2px solid #e75480; border-radius: 20px; font-weight: 700">
                                     {{ __('Login') }}
                                 </button>
                                         <hr>
@@ -77,10 +57,10 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="new-forgot">Forgot Password?</a>
+                                        <a class="small" href="new-forgot" style="color: #e75480; font-weight: 400">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="new-register">Create an Account!</a>
+                                        <a class="small" href="new-register" style="color: #e75480; font-weight: 400">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +83,4 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+@endsection
