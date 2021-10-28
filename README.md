@@ -5,7 +5,7 @@
 | Sr No.        | Software               | Version  | Reason |
 | ------------- |:-------------:         | -----:   | ------:|
 | 1             | Operating System(windows)|  10  |  Because we as a student are using windows.|
-| 3             | Laravel|                 
+| 3             | Laravel| |Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.             
 | 2             | Java SE Development Kit|  14.0.2  | It is a package used  for JAVA. It allows user to run JAVA project on JRE. |
 | 4             | Apache Tomcat|   v9.0 | It is used to execute web pages that include java server page coding.|
 | 5             | mysql-connector-java|   v8.0.21 and 5.1.49 | It is used to Connect MySql Database to java.|
